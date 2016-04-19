@@ -25,12 +25,12 @@
     }];
 
 }
-+(void)post:(NSString *)urlStr withCompletionBlock:(CompletionBlock)successBlock withFailureBlock:(FailureBlock)failureBlock;
++(void)post:(NSString *)urlStr parameters:(NSDictionary *)parameters withCompletionBlock:(CompletionBlock)successBlock withFailureBlock:(FailureBlock)failureBlock;
 {
     
     AFHTTPSessionManager *session= [AFHTTPSessionManager manager];
     
-    [session POST:urlStr parameters:nil success:^(NSURLSessionDataTask * _Nonnull operation, id  _Nonnull responseObject) {
+    [session POST:urlStr parameters:parameters success:^(NSURLSessionDataTask * _Nonnull operation, id  _Nonnull responseObject) {
         if(successBlock){
             successBlock(responseObject);
         }

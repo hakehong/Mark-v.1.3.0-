@@ -17,23 +17,70 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="TZF-K4-cEE">
                         <rect key="frame" x="0.0" y="0.0" width="445" height="179"/>
                     </imageView>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-an-JtL">
+                        <rect key="frame" x="362" y="0.0" width="75" height="74"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UIz-cr-ygp">
+                                <rect key="frame" x="11" y="8" width="18" height="43"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TpJ-eT-f9g">
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="22"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-ec-G7E">
+                                                <rect key="frame" x="0.0" y="0.0" width="17" height="22"/>
+                                                <state key="normal" image="voteDownIcon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP3-9C-a7t">
+                                        <rect key="frame" x="0.0" y="22" width="18" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="QXn-Z5-NUb"/>
+                            <constraint firstAttribute="height" constant="50" id="l9j-NF-UqT"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="newAloneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lbh-IR-4Q6">
+                        <rect key="frame" x="8" y="8" width="52" height="51"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="7hx-8Y-0zA"/>
+                            <constraint firstAttribute="width" constant="50" id="WEE-5v-8Tl"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fj1-an-JtL" secondAttribute="trailing" constant="10" id="8nu-hE-eaz"/>
                 <constraint firstAttribute="bottom" secondItem="TZF-K4-cEE" secondAttribute="bottom" id="GiU-Hf-bQH"/>
                 <constraint firstItem="TZF-K4-cEE" firstAttribute="top" secondItem="bUL-pK-mQQ" secondAttribute="top" id="WKv-f6-B4n"/>
                 <constraint firstItem="TZF-K4-cEE" firstAttribute="leading" secondItem="bUL-pK-mQQ" secondAttribute="leading" id="YxQ-IJ-34M"/>
+                <constraint firstItem="Lbh-IR-4Q6" firstAttribute="top" secondItem="bUL-pK-mQQ" secondAttribute="top" id="gE3-ec-hDi"/>
                 <constraint firstAttribute="trailing" secondItem="TZF-K4-cEE" secondAttribute="trailing" id="hMf-DZ-5UY"/>
+                <constraint firstItem="Lbh-IR-4Q6" firstAttribute="leading" secondItem="bUL-pK-mQQ" secondAttribute="leading" constant="8" id="rnD-3a-2CA"/>
+                <constraint firstItem="Fj1-an-JtL" firstAttribute="top" secondItem="bUL-pK-mQQ" secondAttribute="top" id="uKB-0O-sVY"/>
             </constraints>
             <size key="customSize" width="445" height="179"/>
             <connections>
+                <outlet property="UnwatchImage" destination="Lbh-IR-4Q6" id="Jpf-MC-Eqh"/>
                 <outlet property="image" destination="TZF-K4-cEE" id="df6-Xb-Nhu"/>
+                <outlet property="is_Liked" destination="L5L-ec-G7E" id="bTe-PP-Mu0"/>
+                <outlet property="leftView" destination="Fj1-an-JtL" id="B8P-Ii-4Wm"/>
+                <outlet property="likeNum" destination="SP3-9C-a7t" id="flN-he-6Pr"/>
             </connections>
             <point key="canvasLocation" x="103.5" y="-1914.5"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="2" width="181" height="136"/>
+        <image name="newAloneIcon" width="52" height="52"/>
+        <image name="voteDownIcon" width="17" height="16"/>
     </resources>
 </document>

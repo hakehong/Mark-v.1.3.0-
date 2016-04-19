@@ -10,8 +10,10 @@
 
 @interface testCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-//@property (weak, nonatomic) IBOutlet UILabel *likeNum;
-//@property (weak, nonatomic) IBOutlet UIImageView *NewImage;
-//@property (weak, nonatomic) IBOutlet UIButton *is_Liked;
+@property (weak, nonatomic) IBOutlet UILabel *likeNum;
+@property (weak, nonatomic) IBOutlet UIButton *is_Liked;
+@property (weak, nonatomic) IBOutlet UIImageView *UnwatchImage;
+@property (weak, nonatomic) IBOutlet UIView *leftView;
+
 
 @end

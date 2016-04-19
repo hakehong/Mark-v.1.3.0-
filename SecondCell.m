@@ -20,26 +20,27 @@
     if (self) {
         UIImageView *img =[UIImageView new];
         [self.contentView addSubview:img];
-//        [self settingFrame];
+        self.image =img;
     }
     return self;
 }
--(void)setMovie:(CycleMovie *)movie
+//-(void)setMovie:(CycleMovie *)movie
+//{
+//    _movie =movie;
+//    [self settingData];
+//    [self settingFrame];
+//}
+//-(void)settingData
+//{
+//    
+//    self.image.yy_imageURL =[NSURL URLWithString:_movie.img_url];
+//    
+//    
+//}
+-(void)layoutSubviews
 {
-    _movie =movie;
-    [self settingData];
-    [self settingFrame];
-}
--(void)settingData
-{
-    
-    self.image.yy_imageURL =[NSURL URLWithString:_movie.img_url];
-    
-    
-}
--(void)settingFrame
-{
+    [super layoutSubviews ];
   
-    self.image.frame = CGRectMake(0, 0, (Kwidth -spaceing*5)/4, 80);
+    self.image.frame = CGRectMake(10, 0, (Kwidth -spaceing*5)/4, 80);
 }
 @end
