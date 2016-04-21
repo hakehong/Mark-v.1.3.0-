@@ -12,5 +12,5 @@ typedef void(^FailureBlock)(NSError *error);
 
 @interface HttpTool : NSObject
 +(void)get:(NSString *)url withCompletionBlock:(CompletionBlock)successBlock withFailureBlock:(FailureBlock)failureBlock;
-+(void)post:(NSString *)url withCompletionBlock:(CompletionBlock)successBlock withFailureBlock:(FailureBlock)failureBlock;
++(void)post:(NSString *)urlStr parameters:(NSDictionary *)parameters withCompletionBlock:(CompletionBlock)successBlock withFailureBlock:(FailureBlock)failureBlock;
 @end

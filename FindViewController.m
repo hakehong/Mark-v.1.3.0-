@@ -21,11 +21,14 @@ static NSString *const CellID1 =@"CellID1";
 static NSString *const CellID =@"CellID";
 static NSString *const CycleUrl =@"http://114.215.104.21/v130/singles/banner?";
 static NSString *const SecondUrl =@"http://114.215.104.21/v130/singles/cat?";
+static NSString *const MovieListUrl =@"http://114.215.104.21/v130/singles/list";
 
-@interface FindViewController()<SDCycleScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@interface FindViewController() <SDCycleScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     CycleMovieList *list;
     CycleMovieList  *list2;
+    CycleMovieList  *list3;
    
 }
 @property(nonatomic,strong)UITableView *tableView;
@@ -34,11 +37,14 @@ static NSString *const SecondUrl =@"http://114.215.104.21/v130/singles/cat?";
 @property(nonatomic,copy)NSMutableArray *imagesURLStrings;
 @property(nonatomic,copy)NSMutableArray *imagesURLStrings2;
 @end
+
 @implementation FindViewController
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    NSDictionary *params =  [NSDictionary dictionaryWithObjectsAndKeys:@"10",@"count",@"HU0QIAGVzI0xIDq6k9RHcA%3D%3D",@"muid",@"0",@"start",@"1718",@"uid", nil];
+    
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_enter(group);
     [HttpTool get:CycleUrl withCompletionBlock:^(id returnValue) {
@@ -54,31 +60,38 @@ static NSString *const SecondUrl =@"http://114.215.104.21/v130/singles/cat?";
         NSLog(@"%@",error);
         dispatch_group_leave(group);
     }];
-    
-//    dispatch_group_enter(group);
-//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//    [HttpTool get:SecondUrl withCompletionBlock:^(id returnValue) {
-//      list2 =[CycleMovieList yy_modelWithDictionary:returnValue];
-//        [self.collectionView reloadData];
-//        dispatch_group_leave(group);
-//    } withFailureBlock:^(NSError *error) {
-//        NSLog(@"%@",error);
-//        dispatch_group_leave(group);
-//    }];
-//    });
+   
+    dispatch_group_enter(group);
+    [HttpTool get:SecondUrl withCompletionBlock:^(id returnValue) {
+      list2 =[CycleMovieList yy_modelWithDictionary:returnValue];
+        dispatch_group_leave(group);
+    } withFailureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+        dispatch_group_leave(group);
+    }];
+
+    dispatch_group_enter(group);
+    [HttpTool post:MovieListUrl parameters:params  withCompletionBlock:^(id returnValue) {
+        list3=[CycleMovieList yy_modelWithJSON:returnValue];
+      
+     dispatch_group_leave(group);
+    } withFailureBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+        dispatch_group_leave(group);
+    }];
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
    
-         [self.view addSubview:_tableView];
-        [self.collectionView reloadData];
+        
+       [self.collectionView reloadData];
+        [self.tableView reloadData];
     });
     _tableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0, Kwidth,Kheight)];
     _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Kwidth, 250)];
     _tableView.delegate =self;
     _tableView.dataSource =self;
- 
-   
+    [self.view addSubview:_tableView];
     [self initCycleScrollView];
-     [self initCollectionView];
+    [self initCollectionView];
     
 }
 -(void)initCycleScrollView
@@ -88,7 +101,7 @@ static NSString *const SecondUrl =@"http://114.215.104.21/v130/singles/cat?";
     _cycleScrollView.autoScrollTimeInterval =5.0;
     [self.view addSubview:_cycleScrollView];
     
-    list2 =[self getSecondMovieList];
+//    list2 =[self getSecondMovieList];
    
     [_tableView.tableHeaderView addSubview:_cycleScrollView];
 
@@ -106,15 +119,12 @@ static NSString *const SecondUrl =@"http://114.215.104.21/v130/singles/cat?";
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 160, Kwidth, 80) collectionViewLayout:flowLayout];
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.pagingEnabled = YES;
+//    collectionView.bounces =NO;
     collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView=collectionView;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
-//        [self.view addSubview:_collectionView];
-   
-        [_tableView.tableHeaderView addSubview:self.collectionView];
-//       [_tableView.tableHeaderView insertSubview:_collectionView belowSubview:_cycleScrollView];
-//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:4] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    [_tableView.tableHeaderView addSubview:self.collectionView];
     
     [self.collectionView registerClass:[SecondCell class] forCellWithReuseIdentifier:CellID1];
 
@@ -135,32 +145,46 @@ static NSString *const SecondUrl =@"http://114.215.104.21/v130/singles/cat?";
     return cell;
 }
 
--(CycleMovieList *)getSecondMovieList
+//-(CycleMovieList *)getSecondMovieList
+//{
+//    NSURL *url =[NSURL URLWithString:@"http://114.215.104.21/v130/singles/cat?"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url ];
+//    
+//    //将请求的url数据放到NSData对象中
+//    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+//    NSDictionary *resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+//    CycleMovieList *movieList =[CycleMovieList yy_modelWithDictionary:resultDict];
+//    return movieList;
+//}
+#pragma mark - tableView dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSURL *url =[NSURL URLWithString:@"http://114.215.104.21/v130/singles/cat?"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url ];
-    
-    //将请求的url数据放到NSData对象中
-    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSDictionary *resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
-    CycleMovieList *movieList =[CycleMovieList yy_modelWithDictionary:resultDict];
-    return movieList;
+    return (list3.data.count)/2;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-   return 100;
+    return 2;
     }
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
+{
+    NSString *str =[NSString stringWithFormat:@"这个是%ld",section];
+    return str;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     testCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
         if (cell ==nil) {
             cell = (testCell *)[[[NSBundle mainBundle] loadNibNamed:@"testCell" owner:self options:nil] lastObject];
         }
+    CycleMovie *movie =list3.data[indexPath.row];
+        cell.image.yy_imageURL=[NSURL URLWithString:movie.img_url];
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc] init];
+    cell.likeNum.text = [numberFormatter stringFromNumber:movie.likes];
+    cell.nameLabel.text =movie.name;
+//    cell.likeNum.text = movie.likes;
     return cell;
     }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     return 200;
 }
-
 
 @end

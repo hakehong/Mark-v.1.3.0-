@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *UnwatchImage;
 @property (weak, nonatomic) IBOutlet UIView *leftView;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
