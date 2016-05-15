@@ -15,5 +15,6 @@
 #define  Kheight [UIScreen mainScreen].bounds.size.height
 #define DownColor [UIColor colorWithRed:73.0/255.0 green:46.0/255.0 blue:105.0/255.0 alpha:1]
 #define UpColor [UIColor colorWithRed:34.0/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1]
+#define kScreenBounds [UIScreen mainScreen].bounds
 
 #endif /* Mark_Prefix_pch */

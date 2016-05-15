@@ -7,14 +7,14 @@
 //
 
 #import "searchMovie.h"
-#import "image.h"
+#import "imageAll.h"
 
 @implementation searchMovie
-+(NSDictionary *)modelCustomPropertyMapper
++(NSDictionary *)modelContainerPropertyGenericClass
 {
     return @{@"title":@"title",
              @"alt":@"alt",
-              @"image":image.class
+              @"images":imageAll.class
              };
 }
 @end

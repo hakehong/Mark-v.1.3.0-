@@ -6,9 +6,9 @@
 //  Copyright © 2016年 hongqing. All rights reserved.
 //
 
-#import "image.h"
+#import "imageAll.h"
 
-@implementation image
+@implementation imageAll
 +(NSDictionary *)modelCustomPropertyMapper
 {
     return @{@"small":@"small",

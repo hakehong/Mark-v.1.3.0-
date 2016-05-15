@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9D8483CF533C88A0479740C6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB8406A58CCC692A8C8D05 /* Pods.framework */; };
 		F107A8811CBE18FF0013570A /* SecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F107A8801CBE18FF0013570A /* SecondCell.m */; };
+		F10CF1F51CD346EB00D7D42F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1F41CD346EB00D7D42F /* DetailViewController.m */; };
+		F10CF1F81CD36B8100D7D42F /* DetailViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1F71CD36B8100D7D42F /* DetailViewTool.m */; };
+		F10CF1FB1CD38F0000D7D42F /* WebImgScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1FA1CD38F0000D7D42F /* WebImgScrollView.m */; };
+		F10CF2011CD3937D00D7D42F /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1FE1CD3937D00D7D42F /* MBProgressHUD+MJ.m */; };
 		F11A301F1C919A3700C6A15D /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A30151C919A3700C6A15D /* CollectionViewController.m */; };
 		F11A30201C919A3700C6A15D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A30181C919A3700C6A15D /* SearchViewController.m */; };
 		F11A30211C919A3700C6A15D /* WantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A301B1C919A3700C6A15D /* WantViewController.m */; };
@@ -39,9 +43,8 @@
 		F187F2D41C9504F500CCF6C4 /* Cyclemovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F2D31C9504F500CCF6C4 /* Cyclemovie.m */; };
 		F18C6B641CC4E42A00716077 /* searchMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B631CC4E42A00716077 /* searchMovie.m */; };
 		F18C6B671CC4E63600716077 /* seachMovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B661CC4E63600716077 /* seachMovieList.m */; };
-		F18C6B6A1CC4E6BF00716077 /* image.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B691CC4E6BF00716077 /* image.m */; };
+		F18C6B6A1CC4E6BF00716077 /* imageAll.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B691CC4E6BF00716077 /* imageAll.m */; };
 		F18C6B6D1CC51F8400716077 /* MovieTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B6C1CC51F8400716077 /* MovieTool.m */; };
-		F195BCCE1C8C87850035E7E6 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = F195BCCD1C8C87850035E7E6 /* Tool.m */; };
 		F195BCD11C8C8A5E0035E7E6 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F195BCD01C8C8A5E0035E7E6 /* SettingViewController.m */; };
 		F1CB0D451CC5B49500CE17CC /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB0D431CC5B49500CE17CC /* searchCell.m */; };
 		F1CB0D461CC5B49500CE17CC /* searchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CB0D441CC5B49500CE17CC /* searchCell.xib */; };
@@ -72,6 +75,14 @@
 		A95A646C0839019A2D882D56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F107A87F1CBE18FF0013570A /* SecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondCell.h; sourceTree = "<group>"; };
 		F107A8801CBE18FF0013570A /* SecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondCell.m; sourceTree = "<group>"; };
+		F10CF1F31CD346EB00D7D42F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F10CF1F41CD346EB00D7D42F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F10CF1F61CD36B8100D7D42F /* DetailViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewTool.h; sourceTree = "<group>"; };
+		F10CF1F71CD36B8100D7D42F /* DetailViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewTool.m; sourceTree = "<group>"; };
+		F10CF1F91CD38F0000D7D42F /* WebImgScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImgScrollView.h; sourceTree = "<group>"; };
+		F10CF1FA1CD38F0000D7D42F /* WebImgScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImgScrollView.m; sourceTree = "<group>"; };
+		F10CF1FD1CD3937D00D7D42F /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		F10CF1FE1CD3937D00D7D42F /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		F11A30141C919A3700C6A15D /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		F11A30151C919A3700C6A15D /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		F11A30171C919A3700C6A15D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -84,12 +95,12 @@
 		F11A30241C919A8B00C6A15D /* Demo1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1Cell.m; sourceTree = "<group>"; };
 		F12756B41CB3FBB100F366E1 /* movieList+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "movieList+Request.h"; sourceTree = "<group>"; };
 		F12756B51CB3FBB100F366E1 /* movieList+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "movieList+Request.m"; sourceTree = "<group>"; };
-		F127B8DC1CA60F7D00C6DBA6 /* listView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listView.xib; sourceTree = "<group>"; };
-		F12857841CB4DB1E000B4E4C /* MovieInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfoCell.h; sourceTree = "<group>"; };
-		F12857851CB4DB1E000B4E4C /* MovieInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfoCell.m; sourceTree = "<group>"; };
-		F12857871CB4DB3D000B4E4C /* MovieInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfoViewController.h; sourceTree = "<group>"; };
-		F12857881CB4DB3D000B4E4C /* MovieInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfoViewController.m; sourceTree = "<group>"; };
-		F128578A1CB4DB55000B4E4C /* MovieInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieInfo.xib; sourceTree = "<group>"; };
+		F127B8DC1CA60F7D00C6DBA6 /* listView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = listView.xib; path = ../listView.xib; sourceTree = "<group>"; };
+		F12857841CB4DB1E000B4E4C /* MovieInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieInfoCell.h; path = ../MovieInfoCell.h; sourceTree = "<group>"; };
+		F12857851CB4DB1E000B4E4C /* MovieInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieInfoCell.m; path = ../MovieInfoCell.m; sourceTree = "<group>"; };
+		F12857871CB4DB3D000B4E4C /* MovieInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieInfoViewController.h; path = ../MovieInfoViewController.h; sourceTree = "<group>"; };
+		F12857881CB4DB3D000B4E4C /* MovieInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieInfoViewController.m; path = ../MovieInfoViewController.m; sourceTree = "<group>"; };
+		F128578A1CB4DB55000B4E4C /* MovieInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieInfo.xib; path = ../MovieInfo.xib; sourceTree = "<group>"; };
 		F128578C1CB4DC42000B4E4C /* MovieInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfo.h; sourceTree = "<group>"; };
 		F128578D1CB4DC42000B4E4C /* MovieInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfo.m; sourceTree = "<group>"; };
 		F128578F1CB4DE0C000B4E4C /* MovieInfoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfoList.h; sourceTree = "<group>"; };
@@ -116,7 +127,7 @@
 		F166F5B21CBE6D8300AC2156 /* testCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testCell.h; sourceTree = "<group>"; };
 		F166F5B31CBE6D8300AC2156 /* testCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testCell.m; sourceTree = "<group>"; };
 		F166F5B51CBE6D9100AC2156 /* testCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testCell.xib; sourceTree = "<group>"; };
-		F1752AFA1CC5DDCE00D3C77E /* Mark_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mark_Prefix.pch; sourceTree = "<group>"; };
+		F1752AFA1CC5DDCE00D3C77E /* Mark_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mark_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		F187BCBA1CBB203300A80A43 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		F187BCBB1CBB203300A80A43 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		F187BCBD1CBB26D200A80A43 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
@@ -129,12 +140,10 @@
 		F18C6B631CC4E42A00716077 /* searchMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchMovie.m; sourceTree = "<group>"; };
 		F18C6B651CC4E63600716077 /* seachMovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seachMovieList.h; sourceTree = "<group>"; };
 		F18C6B661CC4E63600716077 /* seachMovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = seachMovieList.m; sourceTree = "<group>"; };
-		F18C6B681CC4E6BF00716077 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
-		F18C6B691CC4E6BF00716077 /* image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = image.m; sourceTree = "<group>"; };
+		F18C6B681CC4E6BF00716077 /* imageAll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageAll.h; sourceTree = "<group>"; };
+		F18C6B691CC4E6BF00716077 /* imageAll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageAll.m; sourceTree = "<group>"; };
 		F18C6B6B1CC51F8300716077 /* MovieTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTool.h; sourceTree = "<group>"; };
 		F18C6B6C1CC51F8400716077 /* MovieTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTool.m; sourceTree = "<group>"; };
-		F195BCCC1C8C87850035E7E6 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
-		F195BCCD1C8C87850035E7E6 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		F195BCCF1C8C8A5E0035E7E6 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		F195BCD01C8C8A5E0035E7E6 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		F1CB0D421CC5B49500CE17CC /* searchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchCell.h; sourceTree = "<group>"; };
@@ -143,10 +152,10 @@
 		F1DD108D1C9449BF00A0CC84 /* CycleMovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleMovieList.h; sourceTree = "<group>"; };
 		F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleMovieList.m; sourceTree = "<group>"; };
 		F1DD10921C945D6B00A0CC84 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = watched/Config.h; sourceTree = "<group>"; };
-		F1FE977B1C94F02B0045D3A1 /* MovieListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListViewController.h; sourceTree = "<group>"; };
-		F1FE977C1C94F02B0045D3A1 /* MovieListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListViewController.m; sourceTree = "<group>"; };
-		F1FE977E1C94F0550045D3A1 /* MovieListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListViewCell.h; sourceTree = "<group>"; };
-		F1FE977F1C94F0550045D3A1 /* MovieListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListViewCell.m; sourceTree = "<group>"; };
+		F1FE977B1C94F02B0045D3A1 /* MovieListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieListViewController.h; path = ../MovieListViewController.h; sourceTree = "<group>"; };
+		F1FE977C1C94F02B0045D3A1 /* MovieListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieListViewController.m; path = ../MovieListViewController.m; sourceTree = "<group>"; };
+		F1FE977E1C94F0550045D3A1 /* MovieListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieListViewCell.h; path = ../MovieListViewCell.h; sourceTree = "<group>"; };
+		F1FE977F1C94F0550045D3A1 /* MovieListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieListViewCell.m; path = ../MovieListViewCell.m; sourceTree = "<group>"; };
 		FBA47907B96D3F12524ACF8C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +202,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F10CF1F21CD3466F00D7D42F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F10CF1F61CD36B8100D7D42F /* DetailViewTool.h */,
+				F10CF1F71CD36B8100D7D42F /* DetailViewTool.m */,
+				F10CF1F31CD346EB00D7D42F /* DetailViewController.h */,
+				F10CF1F41CD346EB00D7D42F /* DetailViewController.m */,
+				F10CF1F91CD38F0000D7D42F /* WebImgScrollView.h */,
+				F10CF1FA1CD38F0000D7D42F /* WebImgScrollView.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		F10CF1FC1CD3935E00D7D42F /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				F10CF1FD1CD3937D00D7D42F /* MBProgressHUD+MJ.h */,
+				F10CF1FE1CD3937D00D7D42F /* MBProgressHUD+MJ.m */,
+			);
+			name = Vender;
+			sourceTree = "<group>";
+		};
 		F11A30131C919A3700C6A15D /* collection */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,8 +242,8 @@
 				F18C6B631CC4E42A00716077 /* searchMovie.m */,
 				F18C6B651CC4E63600716077 /* seachMovieList.h */,
 				F18C6B661CC4E63600716077 /* seachMovieList.m */,
-				F18C6B681CC4E6BF00716077 /* image.h */,
-				F18C6B691CC4E6BF00716077 /* image.m */,
+				F18C6B681CC4E6BF00716077 /* imageAll.h */,
+				F18C6B691CC4E6BF00716077 /* imageAll.m */,
 				F18C6B6B1CC51F8300716077 /* MovieTool.h */,
 				F18C6B6C1CC51F8400716077 /* MovieTool.m */,
 				F1CB0D421CC5B49500CE17CC /* searchCell.h */,
@@ -243,17 +274,6 @@
 		F128E3E61C8A8DBC007B3BAC = {
 			isa = PBXGroup;
 			children = (
-				F1752AFA1CC5DDCE00D3C77E /* Mark_Prefix.pch */,
-				F12857871CB4DB3D000B4E4C /* MovieInfoViewController.h */,
-				F12857881CB4DB3D000B4E4C /* MovieInfoViewController.m */,
-				F12857841CB4DB1E000B4E4C /* MovieInfoCell.h */,
-				F12857851CB4DB1E000B4E4C /* MovieInfoCell.m */,
-				F128578A1CB4DB55000B4E4C /* MovieInfo.xib */,
-				F127B8DC1CA60F7D00C6DBA6 /* listView.xib */,
-				F1FE977E1C94F0550045D3A1 /* MovieListViewCell.h */,
-				F1FE977F1C94F0550045D3A1 /* MovieListViewCell.m */,
-				F1FE977B1C94F02B0045D3A1 /* MovieListViewController.h */,
-				F1FE977C1C94F02B0045D3A1 /* MovieListViewController.m */,
 				F128E3F11C8A8DBC007B3BAC /* Mark */,
 				F128E40E1C8A8DBD007B3BAC /* MarkTests */,
 				F128E4191C8A8DBD007B3BAC /* MarkUITests */,
@@ -276,17 +296,17 @@
 		F128E3F11C8A8DBC007B3BAC /* Mark */ = {
 			isa = PBXGroup;
 			children = (
+				F10CF1FC1CD3935E00D7D42F /* Vender */,
 				F187BCC31CBB3E8000A80A43 /* Common */,
 				F192624B1CBA925E00E66658 /* Tool */,
 				F192624A1CBA923200E66658 /* Model */,
 				F192624C1CBA927300E66658 /* Request */,
+				F10CF1F21CD3466F00D7D42F /* Detail */,
 				F19262481CBA7FFE00E66658 /* find */,
 				F11A30131C919A3700C6A15D /* collection */,
 				F11A30161C919A3700C6A15D /* search */,
 				F11A30191C919A3700C6A15D /* want */,
 				F11A301C1C919A3700C6A15D /* watched */,
-				F128E3F51C8A8DBC007B3BAC /* AppDelegate.h */,
-				F128E3F61C8A8DBC007B3BAC /* AppDelegate.m */,
 				F195BCCF1C8C8A5E0035E7E6 /* SettingViewController.h */,
 				F195BCD01C8C8A5E0035E7E6 /* SettingViewController.m */,
 				F1DD10921C945D6B00A0CC84 /* Config.h */,
@@ -294,13 +314,19 @@
 				F128E42B1C8B1D8E007B3BAC /* HqUITabBarController.m */,
 				F11A30231C919A8B00C6A15D /* Demo1Cell.h */,
 				F11A30241C919A8B00C6A15D /* Demo1Cell.m */,
-				F195BCCC1C8C87850035E7E6 /* Tool.h */,
-				F195BCCD1C8C87850035E7E6 /* Tool.m */,
+				F12857871CB4DB3D000B4E4C /* MovieInfoViewController.h */,
+				F12857881CB4DB3D000B4E4C /* MovieInfoViewController.m */,
+				F12857841CB4DB1E000B4E4C /* MovieInfoCell.h */,
+				F12857851CB4DB1E000B4E4C /* MovieInfoCell.m */,
+				F128578A1CB4DB55000B4E4C /* MovieInfo.xib */,
+				F127B8DC1CA60F7D00C6DBA6 /* listView.xib */,
+				F1FE977E1C94F0550045D3A1 /* MovieListViewCell.h */,
+				F1FE977F1C94F0550045D3A1 /* MovieListViewCell.m */,
+				F1FE977B1C94F02B0045D3A1 /* MovieListViewController.h */,
+				F1FE977C1C94F02B0045D3A1 /* MovieListViewController.m */,
 				F128E3FB1C8A8DBD007B3BAC /* Main.storyboard */,
 				F128E4011C8A8DBD007B3BAC /* Assets.xcassets */,
 				F128E4031C8A8DBD007B3BAC /* LaunchScreen.storyboard */,
-				F128E4061C8A8DBD007B3BAC /* Info.plist */,
-				F128E3FE1C8A8DBD007B3BAC /* Mark.xcdatamodeld */,
 				F128E3F21C8A8DBC007B3BAC /* Supporting Files */,
 			);
 			path = Mark;
@@ -309,6 +335,11 @@
 		F128E3F21C8A8DBC007B3BAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F128E3F51C8A8DBC007B3BAC /* AppDelegate.h */,
+				F128E3F61C8A8DBC007B3BAC /* AppDelegate.m */,
+				F1752AFA1CC5DDCE00D3C77E /* Mark_Prefix.pch */,
+				F128E3FE1C8A8DBD007B3BAC /* Mark.xcdatamodeld */,
+				F128E4061C8A8DBD007B3BAC /* Info.plist */,
 				F128E3F31C8A8DBC007B3BAC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -588,16 +619,18 @@
 				F18C6B641CC4E42A00716077 /* searchMovie.m in Sources */,
 				F11A301F1C919A3700C6A15D /* CollectionViewController.m in Sources */,
 				F11A30211C919A3700C6A15D /* WantViewController.m in Sources */,
-				F195BCCE1C8C87850035E7E6 /* Tool.m in Sources */,
 				F12857941CB51326000B4E4C /* MovieInfoList+Request.m in Sources */,
 				F18C6B6D1CC51F8400716077 /* MovieTool.m in Sources */,
+				F10CF2011CD3937D00D7D42F /* MBProgressHUD+MJ.m in Sources */,
 				F12756B61CB3FBB100F366E1 /* movieList+Request.m in Sources */,
+				F10CF1F51CD346EB00D7D42F /* DetailViewController.m in Sources */,
 				F1CB0D451CC5B49500CE17CC /* searchCell.m in Sources */,
+				F10CF1FB1CD38F0000D7D42F /* WebImgScrollView.m in Sources */,
 				F1FE97801C94F0550045D3A1 /* MovieListViewCell.m in Sources */,
 				F128E42C1C8B1D8E007B3BAC /* HqUITabBarController.m in Sources */,
 				F1DD108F1C9449BF00A0CC84 /* CycleMovieList.m in Sources */,
 				F128E3F71C8A8DBC007B3BAC /* AppDelegate.m in Sources */,
-				F18C6B6A1CC4E6BF00716077 /* image.m in Sources */,
+				F18C6B6A1CC4E6BF00716077 /* imageAll.m in Sources */,
 				F187F2D41C9504F500CCF6C4 /* Cyclemovie.m in Sources */,
 				F128E3F41C8A8DBC007B3BAC /* main.m in Sources */,
 				F11A30221C919A3700C6A15D /* WatchedViewController.m in Sources */,
@@ -605,6 +638,7 @@
 				F11A30201C919A3700C6A15D /* SearchViewController.m in Sources */,
 				F12857861CB4DB1E000B4E4C /* MovieInfoCell.m in Sources */,
 				F18C6B671CC4E63600716077 /* seachMovieList.m in Sources */,
+				F10CF1F81CD36B8100D7D42F /* DetailViewTool.m in Sources */,
 				F1FE977D1C94F02B0045D3A1 /* MovieListViewController.m in Sources */,
 				F195BCD11C8C8A5E0035E7E6 /* SettingViewController.m in Sources */,
 				F12857891CB4DB3D000B4E4C /* MovieInfoViewController.m in Sources */,

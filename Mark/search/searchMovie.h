@@ -11,5 +11,5 @@
 @interface searchMovie : NSObject
 @property(nonatomic,copy) NSString *title;
 @property(nonatomic,copy)NSString *alt;
-@property (nonatomic, strong) NSArray *imageAll;
+@property (nonatomic, strong) NSArray *images;
 @end

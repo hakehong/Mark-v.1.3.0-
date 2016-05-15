@@ -8,36 +8,30 @@
 #import "testCell.h"
 
 @implementation testCell
-
-//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-//    self = [super initWithCoder:aDecoder];
-//    if (self) {
-//        [self commonInit];
-//    }
-//    return self;
-//}
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self commonInit];
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self =[super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self)
+    {
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"testCell" owner:nil options:nil];
+        self=[views firstObject];
     }
     return self;
 }
+//- (void)layoutSubviews {
+//    [super layoutSubviews];
+//    _image.frame = CGRectMake(0, 0, Kwidth,200);
+//    self.leftView.frame =CGRectMake(Kwidth-40, 0, 30, 50);
+//    self.nameLabel.frame =CGRectMake(20, 150, Kwidth-40, 30);
+//}
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    _image.frame = CGRectMake(0, 0, Kwidth,200);
-    self.leftView.frame =CGRectMake(Kwidth-40, 0, 30, 50);
-    self.nameLabel.frame =CGRectMake(20, 150, Kwidth-40, 30);
-}
-
-- (void)commonInit {
-    [self addSubview:self.image];
-    [self.image addSubview:self.UnwatchImage];
-    [self.image addSubview:self.is_Liked];
-    [self.image addSubview:self.likeNum];
-    [self.image addSubview:self.nameLabel];
-}
+//- (void)commonInit {
+//    [self addSubview:self.image];
+//    [self.image addSubview:self.UnwatchImage];
+//    [self.image addSubview:self.is_Liked];
+//    [self.image addSubview:self.likeNum];
+//    [self.image addSubview:self.nameLabel];
+//}
 
 //- (UIImageView *)image {
 //    if (_image == nil) {

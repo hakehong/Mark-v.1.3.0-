@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *likeNum;
 @property (weak, nonatomic) IBOutlet UIButton *is_Liked;
 @property (weak, nonatomic) IBOutlet UIImageView *UnwatchImage;
-@property (weak, nonatomic) IBOutlet UIView *leftView;
+//@property (weak, nonatomic) IBOutlet UIView *leftView;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 

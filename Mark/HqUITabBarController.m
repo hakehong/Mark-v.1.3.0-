@@ -5,8 +5,7 @@
 //  Created by hongqing on 16/3/5.
 //  Copyright © 2016年 hongqing. All rights reserved.
 //
-#define DownColor [UIColor colorWithRed:73.0/255.0 green:46.0/255.0 blue:105.0/255.0 alpha:1]
-#define UpColor [UIColor colorWithRed:34.0/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1]
+
 #import "WantViewController.h"
 #import "WatchedViewController.h"
 #import "SearchViewController.h"

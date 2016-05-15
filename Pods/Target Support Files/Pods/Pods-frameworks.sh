@@ -85,6 +85,8 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/MBProgressHUD.framework"
+  install_framework "Pods/MJRefresh.framework"
   install_framework "Pods/SDCycleScrollView.framework"
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/YYCache.framework"
@@ -94,6 +96,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/MBProgressHUD.framework"
+  install_framework "Pods/MJRefresh.framework"
   install_framework "Pods/SDCycleScrollView.framework"
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/YYCache.framework"

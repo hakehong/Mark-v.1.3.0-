@@ -19,7 +19,7 @@
 static NSString *const searchUrl =@"https://api.douban.com//v2/movie/search?q=";
 static NSString *const CellID =@"searchCell";
 @interface SearchViewController ()<UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
-@property(nonatomic,strong) seachMovieList *movieList;
+@property(nonatomic,strong) seachMovieList *list;
 @property (nonatomic , strong) UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIView *centerView;
 
@@ -41,17 +41,16 @@ static NSString *const CellID =@"searchCell";
     _searchTF.delegate =self;
     
      [_searchTF addTarget:self action:@selector(textFieldEditChanged:) forControlEvents:UIControlEventEditingChanged];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView reloadData];
+    }); 
     [self setSearchView];
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.collectionView reloadData];
-//    }); 
-
     
 }
 -(void)setSearchView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(Kwidth/3-10, Kwidth/3);
+    flowLayout.itemSize = CGSizeMake((Kwidth -40)/3, (Kwidth -40)/3);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     flowLayout.minimumLineSpacing = 10;//设置每个item之间的间距
 //  搜索框的高度为40
@@ -59,7 +58,7 @@ static NSString *const CellID =@"searchCell";
     collectionView.delegate = self;
     collectionView.dataSource = self;
     collectionView.showsVerticalScrollIndicator = YES;
-    collectionView.backgroundColor = [UIColor whiteColor];
+    collectionView.backgroundColor = [UIColor redColor];
     
     _collectionView=collectionView;
     
@@ -83,33 +82,34 @@ static NSString *const CellID =@"searchCell";
     }
    
 }
--(seachMovieList *)getSearchMovieList:(NSString *)searchText
+-(void)getSearchMovieList:(NSString *)searchText
 {
     NSString *url =[searchUrl stringByAppendingString:searchText];
     [HttpTool get:url withCompletionBlock:^(id returnValue) {
-        _movieList =[seachMovieList yy_modelWithDictionary:returnValue];
+         _list =[seachMovieList yy_modelWithDictionary:returnValue];
 //        CompletionBlock(_movieList);
         
     } withFailureBlock:^(NSError *error) {
         nil;
     }];
-    return _movieList;
+  
+    
 }
 - (IBAction)dismissSearch:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    
+    [_searchTF resignFirstResponder];
     return YES;
 }
--(seachMovieList *)setMovieList
-{
-    if (_movieList ==nil) {
-        _movieList =[seachMovieList new];
-    }
-    return _movieList;
-}
+//-(seachMovieList *)setMovieList
+//{
+//    if (_movieList ==nil) {
+//        _movieList =[seachMovieList new];
+//    }
+//    return _movieList;
+//}
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
@@ -126,7 +126,8 @@ static NSString *const CellID =@"searchCell";
     cell.movieImage.image =[UIImage imageNamed:@"guidePageBackImage"];
     cell.movieName.text =@"111";
 //    searchMovie *movie =_movieList.subjects[indexPath.item];
-//    [cell setImage:movie.imageAll[0] content:movie.title];
+//    [cell setImage:movie.images[0] content:movie.title];
+//    cell.movieName.text =movie.title;
     return cell;
 }
 

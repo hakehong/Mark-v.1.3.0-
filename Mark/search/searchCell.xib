@@ -15,9 +15,6 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="136" height="193"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guidePageBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="cge-u1-neN">
-                        <rect key="frame" x="-4" y="0.0" width="144" height="164"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="因为爱情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-M0-dk1">
                         <rect key="frame" x="8" y="164" width="120" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -32,6 +29,9 @@
                             <action selector="addMovie:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2IO-HO-oAh"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guidePageBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="cge-u1-neN">
+                        <rect key="frame" x="-4" y="0.0" width="144" height="164"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
