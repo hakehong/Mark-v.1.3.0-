@@ -16,7 +16,7 @@
              @"name":@"name",
              @"img_url":@"img_url",
              @"likes":@"likes",
-             @"content":@"content",
+             @"contentInfo":@"content",
              @"shares":@"shares",
              @"publish_time":@"publish_time",
              @"is_liked":@"is_liked"

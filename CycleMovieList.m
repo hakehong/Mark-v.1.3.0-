@@ -14,4 +14,10 @@
              @"data" : CycleMovie.class
              };
 }
++(NSDictionary *)modelCustomPropertyMapper
+{
+    return @{@"singleData":@"data",
+             
+             };
+}
 @end

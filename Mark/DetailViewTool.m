@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewTool.h"
-#import "CycleMovie.h"
+#import "CycleMovieList.h"
 #import "HttpTool.h"
 #import "NSObject+YYModel.h"
 @implementation DetailViewTool
@@ -16,9 +16,9 @@
      {
       NSDictionary *params =  [NSDictionary dictionaryWithObjectsAndKeys:storyId,@"id",@"HU0QIAGVzI0xIDq6k9RHcA==",@"muid",@"1718",@"uid", nil];
        [HttpTool post:[NSString stringWithFormat:@"http://114.215.104.21/mark_web/singles/detail"] parameters:params withCompletionBlock:^(id returnValue) {
-           CycleMovie *movie  = [CycleMovie yy_modelWithJSON:returnValue];
-           movie.htmlUrl =[NSString stringWithFormat:@"<html><head></head><body>%@</body></html>",movie.content];
-           callBack(movie);
+           CycleMovieList *movieList  = [CycleMovieList yy_modelWithDictionary:returnValue];
+//           movie.htmlUrl =[NSString stringWithFormat:@"<html><head></head><body>%@</body></html>",movie.contentInfo];
+           callBack(movieList.singleData);
        } withFailureBlock:^(NSError *error) {
            nil;
        }];

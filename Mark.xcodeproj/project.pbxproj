@@ -37,10 +37,10 @@
 		F128E42C1C8B1D8E007B3BAC /* HqUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F128E42B1C8B1D8E007B3BAC /* HqUITabBarController.m */; };
 		F166F5B41CBE6D8300AC2156 /* testCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F166F5B31CBE6D8300AC2156 /* testCell.m */; };
 		F166F5B61CBE6D9100AC2156 /* testCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F166F5B51CBE6D9100AC2156 /* testCell.xib */; };
+		F17A44191CED65D7005341D6 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F17A44181CED65D7005341D6 /* UIView+Extension.m */; };
 		F187BCBC1CBB203300A80A43 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F187BCBB1CBB203300A80A43 /* HttpTool.m */; };
 		F187BCBF1CBB26D200A80A43 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F187BCBE1CBB26D200A80A43 /* FindViewController.m */; };
-		F187BCC61CBB3E9100A80A43 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F187BCC51CBB3E9100A80A43 /* UIView+Extension.m */; };
-		F187F2D41C9504F500CCF6C4 /* Cyclemovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F2D31C9504F500CCF6C4 /* Cyclemovie.m */; };
+		F187F2D41C9504F500CCF6C4 /* CycleMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F2D31C9504F500CCF6C4 /* CycleMovie.m */; };
 		F18C6B641CC4E42A00716077 /* searchMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B631CC4E42A00716077 /* searchMovie.m */; };
 		F18C6B671CC4E63600716077 /* seachMovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B661CC4E63600716077 /* seachMovieList.m */; };
 		F18C6B6A1CC4E6BF00716077 /* imageAll.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C6B691CC4E6BF00716077 /* imageAll.m */; };
@@ -48,6 +48,7 @@
 		F195BCD11C8C8A5E0035E7E6 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F195BCD01C8C8A5E0035E7E6 /* SettingViewController.m */; };
 		F1CB0D451CC5B49500CE17CC /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB0D431CC5B49500CE17CC /* searchCell.m */; };
 		F1CB0D461CC5B49500CE17CC /* searchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CB0D441CC5B49500CE17CC /* searchCell.xib */; };
+		F1CE31211CE87E6A006783D6 /* CycleMovieSignle.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE31201CE87E6A006783D6 /* CycleMovieSignle.m */; };
 		F1DD108F1C9449BF00A0CC84 /* CycleMovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */; };
 		F1FE977D1C94F02B0045D3A1 /* MovieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE977C1C94F02B0045D3A1 /* MovieListViewController.m */; };
 		F1FE97801C94F0550045D3A1 /* MovieListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE977F1C94F0550045D3A1 /* MovieListViewCell.m */; };
@@ -128,14 +129,14 @@
 		F166F5B31CBE6D8300AC2156 /* testCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testCell.m; sourceTree = "<group>"; };
 		F166F5B51CBE6D9100AC2156 /* testCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testCell.xib; sourceTree = "<group>"; };
 		F1752AFA1CC5DDCE00D3C77E /* Mark_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mark_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		F17A44171CED65D7005341D6 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		F17A44181CED65D7005341D6 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		F187BCBA1CBB203300A80A43 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		F187BCBB1CBB203300A80A43 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		F187BCBD1CBB26D200A80A43 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		F187BCBE1CBB26D200A80A43 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
-		F187BCC41CBB3E9100A80A43 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		F187BCC51CBB3E9100A80A43 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		F187F2D21C9504F500CCF6C4 /* CycleMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleMovie.h; sourceTree = "<group>"; };
-		F187F2D31C9504F500CCF6C4 /* Cyclemovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cyclemovie.m; sourceTree = "<group>"; };
+		F187F2D31C9504F500CCF6C4 /* CycleMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleMovie.m; sourceTree = "<group>"; };
 		F18C6B621CC4E42A00716077 /* searchMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchMovie.h; sourceTree = "<group>"; };
 		F18C6B631CC4E42A00716077 /* searchMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchMovie.m; sourceTree = "<group>"; };
 		F18C6B651CC4E63600716077 /* seachMovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seachMovieList.h; sourceTree = "<group>"; };
@@ -149,6 +150,8 @@
 		F1CB0D421CC5B49500CE17CC /* searchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchCell.h; sourceTree = "<group>"; };
 		F1CB0D431CC5B49500CE17CC /* searchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchCell.m; sourceTree = "<group>"; };
 		F1CB0D441CC5B49500CE17CC /* searchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchCell.xib; sourceTree = "<group>"; };
+		F1CE311F1CE87E6A006783D6 /* CycleMovieSignle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleMovieSignle.h; sourceTree = "<group>"; };
+		F1CE31201CE87E6A006783D6 /* CycleMovieSignle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleMovieSignle.m; sourceTree = "<group>"; };
 		F1DD108D1C9449BF00A0CC84 /* CycleMovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleMovieList.h; sourceTree = "<group>"; };
 		F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleMovieList.m; sourceTree = "<group>"; };
 		F1DD10921C945D6B00A0CC84 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = watched/Config.h; sourceTree = "<group>"; };
@@ -366,8 +369,8 @@
 		F187BCC31CBB3E8000A80A43 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F187BCC41CBB3E9100A80A43 /* UIView+Extension.h */,
-				F187BCC51CBB3E9100A80A43 /* UIView+Extension.m */,
+				F17A44171CED65D7005341D6 /* UIView+Extension.h */,
+				F17A44181CED65D7005341D6 /* UIView+Extension.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -376,7 +379,9 @@
 			isa = PBXGroup;
 			children = (
 				F187F2D21C9504F500CCF6C4 /* CycleMovie.h */,
-				F187F2D31C9504F500CCF6C4 /* Cyclemovie.m */,
+				F187F2D31C9504F500CCF6C4 /* CycleMovie.m */,
+				F1CE311F1CE87E6A006783D6 /* CycleMovieSignle.h */,
+				F1CE31201CE87E6A006783D6 /* CycleMovieSignle.m */,
 				F1DD108D1C9449BF00A0CC84 /* CycleMovieList.h */,
 				F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */,
 				F187BCBD1CBB26D200A80A43 /* FindViewController.h */,
@@ -613,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CE31211CE87E6A006783D6 /* CycleMovieSignle.m in Sources */,
 				F128E4001C8A8DBD007B3BAC /* Mark.xcdatamodeld in Sources */,
 				F11A30251C919A8B00C6A15D /* Demo1Cell.m in Sources */,
 				F107A8811CBE18FF0013570A /* SecondCell.m in Sources */,
@@ -622,6 +628,7 @@
 				F12857941CB51326000B4E4C /* MovieInfoList+Request.m in Sources */,
 				F18C6B6D1CC51F8400716077 /* MovieTool.m in Sources */,
 				F10CF2011CD3937D00D7D42F /* MBProgressHUD+MJ.m in Sources */,
+				F17A44191CED65D7005341D6 /* UIView+Extension.m in Sources */,
 				F12756B61CB3FBB100F366E1 /* movieList+Request.m in Sources */,
 				F10CF1F51CD346EB00D7D42F /* DetailViewController.m in Sources */,
 				F1CB0D451CC5B49500CE17CC /* searchCell.m in Sources */,
@@ -631,7 +638,7 @@
 				F1DD108F1C9449BF00A0CC84 /* CycleMovieList.m in Sources */,
 				F128E3F71C8A8DBC007B3BAC /* AppDelegate.m in Sources */,
 				F18C6B6A1CC4E6BF00716077 /* imageAll.m in Sources */,
-				F187F2D41C9504F500CCF6C4 /* Cyclemovie.m in Sources */,
+				F187F2D41C9504F500CCF6C4 /* CycleMovie.m in Sources */,
 				F128E3F41C8A8DBC007B3BAC /* main.m in Sources */,
 				F11A30221C919A3700C6A15D /* WatchedViewController.m in Sources */,
 				F166F5B41CBE6D8300AC2156 /* testCell.m in Sources */,
@@ -642,7 +649,6 @@
 				F1FE977D1C94F02B0045D3A1 /* MovieListViewController.m in Sources */,
 				F195BCD11C8C8A5E0035E7E6 /* SettingViewController.m in Sources */,
 				F12857891CB4DB3D000B4E4C /* MovieInfoViewController.m in Sources */,
-				F187BCC61CBB3E9100A80A43 /* UIView+Extension.m in Sources */,
 				F187BCBC1CBB203300A80A43 /* HttpTool.m in Sources */,
 				F12857911CB4DE0C000B4E4C /* MovieInfoList.m in Sources */,
 				F187BCBF1CBB26D200A80A43 /* FindViewController.m in Sources */,

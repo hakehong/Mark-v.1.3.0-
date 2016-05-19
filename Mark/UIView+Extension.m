@@ -58,14 +58,14 @@
     return self.center.y;
 }
 
-- (void)setKwidth:(CGFloat)width
+- (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (void)setheight:(CGFloat)height
+- (void)setHeight:(CGFloat)height
 {
     CGRect frame = self.frame;
     frame.size.height = height;

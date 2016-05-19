@@ -9,22 +9,47 @@
 #import "DetailViewController.h"
 #import "WebImgScrollView.h"
 #import "DetailViewTool.h"
+#import "CycleMovie.h"
+#import "UIView+Extension.h"
 @interface DetailViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) UIView *tabBarView;
+@property (nonatomic, strong) UIButton *likeBtn;
+@property (nonatomic, strong) UIButton *shareBtn;
+@property (nonatomic, strong) UILabel *likeLab;
+@property (nonatomic, strong) UILabel *shareLab;
 @end
 
 @implementation DetailViewController
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _likeBtn.frame =_tabBarView.bounds;
+//    _likeBtn.x = 0;
+    _likeBtn.width =_tabBarView.width *0.5;
+    _likeBtn.height =_tabBarView.height;
+    _shareBtn.x =_likeBtn.width;
+    _shareBtn.width =_tabBarView.width *0.5;
+    _shareBtn.height =_tabBarView.height;
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
+    self.tabBarController.tabBar.hidden =YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.navigationItem.title =[NSString stringWithFormat:@"影单详情"];
+    self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"goBackIcon"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     [self.view addSubview:self.webView];
+    [self.view addSubview:self.tabBarView];
+    [self.tabBarView addSubview:self.shareBtn];
+    [self.tabBarView addSubview:self.likeBtn];
     // Do any additional setup after loading the view.
 }
-
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -81,7 +106,7 @@
 }
 - (UIWebView *)webView{
     if (_webView == nil) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 20, Kwidth, Kheight -64)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, Kwidth, Kheight -124)];
         _webView.delegate = self;
         _webView.opaque = NO;
     }
@@ -92,13 +117,79 @@
     _movieId =movieId;
     [DetailViewTool getDetailStoryWithStoryId:movieId Callback:^(id obj) {
         self.movieDetail =obj;
+       [_webView loadHTMLString:self.movieDetail.contentInfo baseURL:nil];
     }];
     
     
 }
 -(void)setMovieDetail:(CycleMovie *)movieDetail
 {
-    
+    _movieDetail = movieDetail;
+  
+}
+
+#pragma mark- 如果多如此类的按钮的初始化，是不是可以使用一种方法如工厂方法批量生产
+ 
+//分享按钮
+- (UIButton *)shareBtn{
+    if (_shareBtn == nil) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn addTarget:self
+                      action:@selector(share)
+            forControlEvents:UIControlEventTouchUpInside];
+        [_shareBtn setImage:[UIImage imageNamed:@"batchShareIcon"]
+                   forState:UIControlStateNormal];
+    }
+    return _shareBtn;
+}
+//喜欢按钮
+- (UIButton *)likeBtn{
+    if (_likeBtn == nil) {
+        _likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_likeBtn addTarget:self
+                      action:@selector(like)
+            forControlEvents:UIControlEventTouchUpInside];
+        [_likeBtn setImage:[UIImage imageNamed:@"voteAloneDownIcon"]
+                   forState:UIControlStateNormal];
+    }
+    return _likeBtn;
+}
+//喜欢人数
+- (UILabel *)likeLab{
+    if (_likeLab == nil) {
+//        _likeLab = [[UILabel alloc] initWithFrame:CGRectMake(40, 23, kScreenWidth - 80, 30)];
+        _likeLab.font = [UIFont systemFontOfSize:18];
+        _likeLab.textColor = [UIColor whiteColor];
+        _likeLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _likeLab;
+}
+//分享人数
+- (UILabel *)shareLab{
+    if (_shareLab == nil) {
+        //        _likeLab = [[UILabel alloc] initWithFrame:CGRectMake(40, 23, kScreenWidth - 80, 30)];
+        _shareLab.font = [UIFont systemFontOfSize:18];
+        _shareLab.textColor = [UIColor whiteColor];
+        _shareLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _shareLab;
+}
+
+-(UIView *)tabBarView
+{
+    if (_tabBarView ==nil) {
+        _tabBarView =[[UIView alloc]initWithFrame:CGRectMake(0, Kheight-60, Kwidth, 60)];
+        _tabBarView.backgroundColor =[UIColor colorWithRed:244.0/255.0 green:244.0/255.0 blue:244.0/255.0 alpha:1];
+    }
+    return _tabBarView;
+}
+-(void)share
+{
+    NSLog(@"share button is click");
+}
+-(void)like
+{
+    NSLog(@"like button is click");
 }
 /*
 #pragma mark - Navigation
