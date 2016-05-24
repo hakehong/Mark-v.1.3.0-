@@ -36,7 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.tabBarController.tabBar.hidden =YES;
+//    self.hidesBottomBarWhenPushed = YES;
+//    self.tabBarController.tabBar.hidden =YES;
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title =[NSString stringWithFormat:@"影单详情"];
     self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"goBackIcon"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];

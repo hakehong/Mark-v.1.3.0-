@@ -39,7 +39,8 @@ static NSString *const CellID =@"searchCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     _searchTF.delegate =self;
-    
+//    self.tabBarController.tabBar.hidden =YES;
+    self.hidesBottomBarWhenPushed = YES;
      [_searchTF addTarget:self action:@selector(textFieldEditChanged:) forControlEvents:UIControlEventEditingChanged];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
@@ -62,7 +63,8 @@ static NSString *const CellID =@"searchCell";
     
     _collectionView=collectionView;
     
-    [self.collectionView registerClass:[searchCell class] forCellWithReuseIdentifier:CellID];
+//    [self.collectionView registerClass:[searchCell class] forCellWithReuseIdentifier:CellID];
+     [self.collectionView registerNib:[UINib nibWithNibName:@"searchCell" bundle:nil] forCellWithReuseIdentifier:CellID];
 
     
 }
@@ -76,9 +78,14 @@ static NSString *const CellID =@"searchCell";
     
     NSLog(@"textfield text %@",textField.text);
     if (textField.text.length != 0 ) {
-        [self getSearchMovieList:textField.text];
+        
         [self.centerView removeFromSuperview];
         [self.view addSubview:_collectionView];
+        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC));
+        
+        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+            [self getSearchMovieList:textField.text];
+        });
     }
    
 }
@@ -123,11 +130,11 @@ static NSString *const CellID =@"searchCell";
     if(!cell){
         cell = [[searchCell alloc] init];
     }
-    cell.movieImage.image =[UIImage imageNamed:@"guidePageBackImage"];
-    cell.movieName.text =@"111";
-//    searchMovie *movie =_movieList.subjects[indexPath.item];
-//    [cell setImage:movie.images[0] content:movie.title];
-//    cell.movieName.text =movie.title;
+//    cell.movieImage.yy_imageURL =[NSURL URLWithString:_list.subjects]
+//    cell.movieName.text =@"111";
+    searchMovie *movie =_list.subjects[indexPath.item];
+    cell.movieImage.yy_imageURL =[NSURL URLWithString:movie.images[0]];
+    cell.movieName.text =movie.title;
     return cell;
 }
 

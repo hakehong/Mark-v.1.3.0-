@@ -11,18 +11,21 @@
 
 @implementation searchCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
--(void)commonInit
-{
-    [self addSubview:_movieName];
-    [self addSubview:_movieImage];
-}
+//-(instancetype)initWithStyle:(UICollectionViewCell*)style reuseIdentifier:(NSString *)reuseIdentifier
+//{
+//    self =[super initWithStyle:style reuseIdentifier:reuseIdentifier];
+//    if(self)
+//    {
+//        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"testCell" owner:nil options:nil];
+//        self=[views firstObject];
+//    }
+//    return self;
+//}
+//-(void)commonInit
+//{
+//    [self addSubview:_movieName];
+//    [self addSubview:_movieImage];
+//}
 - (IBAction)addMovie:(id)sender {
     [sender setBackgroundImage:[UIImage imageNamed:@"alreadyAddIcon"]];
 }

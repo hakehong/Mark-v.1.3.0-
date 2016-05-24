@@ -19,6 +19,7 @@
     [super viewDidLoad];
     UIColor *titleHighlightedColor = UpColor;
     UIColor *titleNomalColor = DownColor;
+//    self.hidesBottomBarWhenPushed =YES;
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleNomalColor, UITextAttributeTextColor,nil] forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleHighlightedColor, UITextAttributeTextColor,
         nil] forState:UIControlStateSelected];

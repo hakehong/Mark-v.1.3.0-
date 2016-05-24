@@ -48,6 +48,7 @@ static NSString *const MovieListUrl =@"http://114.215.104.21/v130/singles/list";
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.tabBarController.tabBar.hidden =NO;
     _params =  [NSDictionary dictionaryWithObjectsAndKeys:@"10",@"count",@"HU0QIAGVzI0xIDq6k9RHcA%3D%3D",@"muid",@"0",@"start",@"1718",@"uid", nil];
 //     _params = @{@"10": count,
 //                 @"HU0QIAGVzI0xIDq6k9RHcA%3D%3D": muid,
@@ -154,8 +155,11 @@ static NSString *const MovieListUrl =@"http://114.215.104.21/v130/singles/list";
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     DetailViewController *DetailView =[DetailViewController new];
+    DetailView.hidesBottomBarWhenPushed =YES;
     [self.navigationController pushViewController:DetailView animated:YES];
-    DetailView.movieId =[list.data[index] Cycle_id];
+    CycleMovie *movie =list.data[index];
+    DetailView.movieId =movie.Cycle_id;
+//    DetailView.movieId =[list.data[index] Cycle_id];
     NSLog(@"%@",[list.data[index] Cycle_id]);
 }
 -(void)initCollectionView
@@ -230,7 +234,7 @@ static NSString *const MovieListUrl =@"http://114.215.104.21/v130/singles/list";
     CycleMovie *movie =list3.data[indexPath.item];
     cell.image.yy_imageURL=[NSURL URLWithString:movie.img_url];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-   cell.likeNum.text = [numberFormatter stringFromNumber:movie.likes];
+//   cell.likeNum.text = [numberFormatter stringFromNumber:movie.likes];
     cell.nameLabel.text =movie.name;
 //    cell.likeNum.text = movie.likes;
     return cell;
