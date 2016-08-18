@@ -10,11 +10,12 @@
 #import "imageAll.h"
 
 @implementation searchMovie
-+(NSDictionary *)modelContainerPropertyGenericClass
++(NSDictionary *)modelCustomPropertyMapper
 {
     return @{@"title":@"title",
              @"alt":@"alt",
-              @"images":imageAll.class
+              @"images" :@"images"
              };
 }
+
 @end

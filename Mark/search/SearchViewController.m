@@ -16,6 +16,7 @@
 #import "NSObject+YYModel.h"
 #import "YYWebImage.h"
 #import "searchCell.h"
+#import "imageAll.h"
 static NSString *const searchUrl =@"https://api.douban.com//v2/movie/search?q=";
 static NSString *const CellID =@"searchCell";
 @interface SearchViewController ()<UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
@@ -39,12 +40,13 @@ static NSString *const CellID =@"searchCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     _searchTF.delegate =self;
-//    self.tabBarController.tabBar.hidden =YES;
-    self.hidesBottomBarWhenPushed = YES;
+    self.navigationItem.hidesBackButton =YES;
+//    self.hidesBottomBarWhenPushed = YES;
      [_searchTF addTarget:self action:@selector(textFieldEditChanged:) forControlEvents:UIControlEventEditingChanged];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.collectionView reloadData];
-    }); 
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.collectionView reloadData];
+//    });
+    [self.collectionView reloadData];
     [self setSearchView];
     
 }
@@ -59,7 +61,7 @@ static NSString *const CellID =@"searchCell";
     collectionView.delegate = self;
     collectionView.dataSource = self;
     collectionView.showsVerticalScrollIndicator = YES;
-    collectionView.backgroundColor = [UIColor redColor];
+    collectionView.backgroundColor = [UIColor whiteColor];
     
     _collectionView=collectionView;
     
@@ -81,11 +83,12 @@ static NSString *const CellID =@"searchCell";
         
         [self.centerView removeFromSuperview];
         [self.view addSubview:_collectionView];
-        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC));
-        
-        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-            [self getSearchMovieList:textField.text];
-        });
+//        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC));
+//        
+//        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+//            [self getSearchMovieList:textField.text];
+//        });
+         [self getSearchMovieList:textField.text];
     }
    
 }
@@ -133,8 +136,11 @@ static NSString *const CellID =@"searchCell";
 //    cell.movieImage.yy_imageURL =[NSURL URLWithString:_list.subjects]
 //    cell.movieName.text =@"111";
     searchMovie *movie =_list.subjects[indexPath.item];
-    cell.movieImage.yy_imageURL =[NSURL URLWithString:movie.images[0]];
+   
+    cell.movieImage.yy_imageURL =[NSURL URLWithString:movie.images.small];
+   
     cell.movieName.text =movie.title;
+//    cell.movieName.text =@"11111";
     return cell;
 }
 
@@ -149,4 +155,7 @@ static NSString *const CellID =@"searchCell";
 //{
 //    return YES;
 //}
+- (IBAction)PopView:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

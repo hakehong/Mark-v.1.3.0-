@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchViewController : UIViewController
+- (IBAction)PopView:(id)sender;
 
 @end
 

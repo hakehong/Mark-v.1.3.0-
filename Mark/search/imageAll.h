@@ -12,4 +12,5 @@
 @property(nonatomic,copy) NSString *small;
 @property(nonatomic,copy)NSString *large;
 @property(nonatomic,copy)NSString *medium;
+
 @end

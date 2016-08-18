@@ -11,6 +11,7 @@
 #import "DetailViewTool.h"
 #import "CycleMovie.h"
 #import "UIView+Extension.h"
+#import "SVProgressHUD.h"
 @interface DetailViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UIView *tabBarView;
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) UIButton *shareBtn;
 @property (nonatomic, strong) UILabel *likeLab;
 @property (nonatomic, strong) UILabel *shareLab;
+
 @end
 
 @implementation DetailViewController
@@ -56,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    
+    [SVProgressHUD dismiss ];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     //调整字号
     NSString *str = @"document.getElementsByTagName('content')[0].style.webkitTextSizeAdjust= '100%'";
@@ -85,6 +87,7 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
+    [SVProgressHUD show];
     NSString *str = request.URL.absoluteString;
     
     if ([str hasPrefix:@"myweb:imageClick:"]) {

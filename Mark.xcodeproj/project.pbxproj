@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9D8483CF533C88A0479740C6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB8406A58CCC692A8C8D05 /* Pods.framework */; };
-		F107A8811CBE18FF0013570A /* SecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F107A8801CBE18FF0013570A /* SecondCell.m */; };
 		F10CF1F51CD346EB00D7D42F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1F41CD346EB00D7D42F /* DetailViewController.m */; };
 		F10CF1F81CD36B8100D7D42F /* DetailViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1F71CD36B8100D7D42F /* DetailViewTool.m */; };
 		F10CF1FB1CD38F0000D7D42F /* WebImgScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1FA1CD38F0000D7D42F /* WebImgScrollView.m */; };
-		F10CF2011CD3937D00D7D42F /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F10CF1FE1CD3937D00D7D42F /* MBProgressHUD+MJ.m */; };
 		F11A301F1C919A3700C6A15D /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A30151C919A3700C6A15D /* CollectionViewController.m */; };
 		F11A30201C919A3700C6A15D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A30181C919A3700C6A15D /* SearchViewController.m */; };
 		F11A30211C919A3700C6A15D /* WantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A301B1C919A3700C6A15D /* WantViewController.m */; };
@@ -38,6 +36,7 @@
 		F166F5B41CBE6D8300AC2156 /* testCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F166F5B31CBE6D8300AC2156 /* testCell.m */; };
 		F166F5B61CBE6D9100AC2156 /* testCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F166F5B51CBE6D9100AC2156 /* testCell.xib */; };
 		F17A44191CED65D7005341D6 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F17A44181CED65D7005341D6 /* UIView+Extension.m */; };
+		F17DB4AC1CF87B830066D4FD /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17DB4AB1CF87B830066D4FD /* SecondView.xib */; };
 		F187BCBC1CBB203300A80A43 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F187BCBB1CBB203300A80A43 /* HttpTool.m */; };
 		F187BCBF1CBB26D200A80A43 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F187BCBE1CBB26D200A80A43 /* FindViewController.m */; };
 		F187F2D41C9504F500CCF6C4 /* CycleMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F2D31C9504F500CCF6C4 /* CycleMovie.m */; };
@@ -48,7 +47,6 @@
 		F195BCD11C8C8A5E0035E7E6 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F195BCD01C8C8A5E0035E7E6 /* SettingViewController.m */; };
 		F1CB0D451CC5B49500CE17CC /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB0D431CC5B49500CE17CC /* searchCell.m */; };
 		F1CB0D461CC5B49500CE17CC /* searchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CB0D441CC5B49500CE17CC /* searchCell.xib */; };
-		F1CE31211CE87E6A006783D6 /* CycleMovieSignle.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CE31201CE87E6A006783D6 /* CycleMovieSignle.m */; };
 		F1DD108F1C9449BF00A0CC84 /* CycleMovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */; };
 		F1FE977D1C94F02B0045D3A1 /* MovieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE977C1C94F02B0045D3A1 /* MovieListViewController.m */; };
 		F1FE97801C94F0550045D3A1 /* MovieListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FE977F1C94F0550045D3A1 /* MovieListViewCell.m */; };
@@ -74,16 +72,12 @@
 /* Begin PBXFileReference section */
 		51BB8406A58CCC692A8C8D05 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95A646C0839019A2D882D56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F107A87F1CBE18FF0013570A /* SecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondCell.h; sourceTree = "<group>"; };
-		F107A8801CBE18FF0013570A /* SecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondCell.m; sourceTree = "<group>"; };
 		F10CF1F31CD346EB00D7D42F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F10CF1F41CD346EB00D7D42F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F10CF1F61CD36B8100D7D42F /* DetailViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewTool.h; sourceTree = "<group>"; };
 		F10CF1F71CD36B8100D7D42F /* DetailViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewTool.m; sourceTree = "<group>"; };
 		F10CF1F91CD38F0000D7D42F /* WebImgScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImgScrollView.h; sourceTree = "<group>"; };
 		F10CF1FA1CD38F0000D7D42F /* WebImgScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImgScrollView.m; sourceTree = "<group>"; };
-		F10CF1FD1CD3937D00D7D42F /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
-		F10CF1FE1CD3937D00D7D42F /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		F11A30141C919A3700C6A15D /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		F11A30151C919A3700C6A15D /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		F11A30171C919A3700C6A15D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -131,6 +125,7 @@
 		F1752AFA1CC5DDCE00D3C77E /* Mark_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mark_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		F17A44171CED65D7005341D6 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		F17A44181CED65D7005341D6 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		F17DB4AB1CF87B830066D4FD /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		F187BCBA1CBB203300A80A43 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		F187BCBB1CBB203300A80A43 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		F187BCBD1CBB26D200A80A43 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
@@ -150,8 +145,6 @@
 		F1CB0D421CC5B49500CE17CC /* searchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchCell.h; sourceTree = "<group>"; };
 		F1CB0D431CC5B49500CE17CC /* searchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchCell.m; sourceTree = "<group>"; };
 		F1CB0D441CC5B49500CE17CC /* searchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchCell.xib; sourceTree = "<group>"; };
-		F1CE311F1CE87E6A006783D6 /* CycleMovieSignle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleMovieSignle.h; sourceTree = "<group>"; };
-		F1CE31201CE87E6A006783D6 /* CycleMovieSignle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleMovieSignle.m; sourceTree = "<group>"; };
 		F1DD108D1C9449BF00A0CC84 /* CycleMovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleMovieList.h; sourceTree = "<group>"; };
 		F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleMovieList.m; sourceTree = "<group>"; };
 		F1DD10921C945D6B00A0CC84 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = watched/Config.h; sourceTree = "<group>"; };
@@ -221,8 +214,6 @@
 		F10CF1FC1CD3935E00D7D42F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				F10CF1FD1CD3937D00D7D42F /* MBProgressHUD+MJ.h */,
-				F10CF1FE1CD3937D00D7D42F /* MBProgressHUD+MJ.m */,
 			);
 			name = Vender;
 			sourceTree = "<group>";
@@ -380,17 +371,14 @@
 			children = (
 				F187F2D21C9504F500CCF6C4 /* CycleMovie.h */,
 				F187F2D31C9504F500CCF6C4 /* CycleMovie.m */,
-				F1CE311F1CE87E6A006783D6 /* CycleMovieSignle.h */,
-				F1CE31201CE87E6A006783D6 /* CycleMovieSignle.m */,
 				F1DD108D1C9449BF00A0CC84 /* CycleMovieList.h */,
 				F1DD108E1C9449BF00A0CC84 /* CycleMovieList.m */,
 				F187BCBD1CBB26D200A80A43 /* FindViewController.h */,
 				F187BCBE1CBB26D200A80A43 /* FindViewController.m */,
-				F107A87F1CBE18FF0013570A /* SecondCell.h */,
-				F107A8801CBE18FF0013570A /* SecondCell.m */,
 				F166F5B21CBE6D8300AC2156 /* testCell.h */,
 				F166F5B31CBE6D8300AC2156 /* testCell.m */,
 				F166F5B51CBE6D9100AC2156 /* testCell.xib */,
+				F17DB4AB1CF87B830066D4FD /* SecondView.xib */,
 			);
 			name = find;
 			path = ..;
@@ -545,6 +533,7 @@
 				F128E4021C8A8DBD007B3BAC /* Assets.xcassets in Resources */,
 				F128E3FD1C8A8DBD007B3BAC /* Main.storyboard in Resources */,
 				F1CB0D461CC5B49500CE17CC /* searchCell.xib in Resources */,
+				F17DB4AC1CF87B830066D4FD /* SecondView.xib in Resources */,
 				F166F5B61CBE6D9100AC2156 /* testCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,16 +607,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1CE31211CE87E6A006783D6 /* CycleMovieSignle.m in Sources */,
 				F128E4001C8A8DBD007B3BAC /* Mark.xcdatamodeld in Sources */,
 				F11A30251C919A8B00C6A15D /* Demo1Cell.m in Sources */,
-				F107A8811CBE18FF0013570A /* SecondCell.m in Sources */,
 				F18C6B641CC4E42A00716077 /* searchMovie.m in Sources */,
 				F11A301F1C919A3700C6A15D /* CollectionViewController.m in Sources */,
 				F11A30211C919A3700C6A15D /* WantViewController.m in Sources */,
 				F12857941CB51326000B4E4C /* MovieInfoList+Request.m in Sources */,
 				F18C6B6D1CC51F8400716077 /* MovieTool.m in Sources */,
-				F10CF2011CD3937D00D7D42F /* MBProgressHUD+MJ.m in Sources */,
 				F17A44191CED65D7005341D6 /* UIView+Extension.m in Sources */,
 				F12756B61CB3FBB100F366E1 /* movieList+Request.m in Sources */,
 				F10CF1F51CD346EB00D7D42F /* DetailViewController.m in Sources */,

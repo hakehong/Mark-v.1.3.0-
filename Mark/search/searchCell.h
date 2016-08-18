@@ -10,9 +10,10 @@
 
 @interface searchCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *movieImage;
-- (IBAction)addMovie:(id)sender;
+
+- (IBAction)addMovie:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *movieName;
-- (void)setImage: (NSString *)imageStr content : (NSString *)content;
+//- (void)setImage: (NSString *)imageStr content : (NSString *)content;
 
 @end

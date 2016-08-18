@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G7a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,47 +15,61 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="136" height="193"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="因为爱情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-M0-dk1">
-                        <rect key="frame" x="8" y="164" width="120" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="guidePageBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="cge-u1-neN">
+                        <rect key="frame" x="-4" y="0.0" width="144" height="164"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="因为爱情" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-M0-dk1">
+                        <rect key="frame" x="0.0" y="164" width="136" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="xil-vP-hx6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzH-S6-2aP">
-                        <rect key="frame" x="46" y="142" width="45" height="22"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOS-xQ-wcE">
+                        <rect key="frame" x="37" y="133" width="63" height="31"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdL-GC-bf1">
+                                <rect key="frame" x="8" y="0.0" width="39" height="31"/>
+                                <state key="normal" image="wantAddIcon"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <state key="normal" image="wantAddIcon"/>
-                        <connections>
-                            <action selector="addMovie:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2IO-HO-oAh"/>
-                        </connections>
-                    </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guidePageBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="cge-u1-neN">
-                        <rect key="frame" x="-4" y="0.0" width="144" height="164"/>
-                    </imageView>
+                        <constraints>
+                            <constraint firstItem="EdL-GC-bf1" firstAttribute="leading" secondItem="NOS-xQ-wcE" secondAttribute="leadingMargin" id="B63-my-nA5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EdL-GC-bf1" secondAttribute="trailing" id="c0r-hP-sgo"/>
+                            <constraint firstAttribute="height" constant="30" id="dun-vu-ghB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="EdL-GC-bf1" secondAttribute="bottom" id="gcf-0z-xli"/>
+                            <constraint firstItem="EdL-GC-bf1" firstAttribute="top" secondItem="NOS-xQ-wcE" secondAttribute="topMargin" id="pjf-jx-hfw"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="SLg-M0-dk1" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="09d-q4-wew"/>
-                <constraint firstItem="rzH-S6-2aP" firstAttribute="height" secondItem="SLg-M0-dk1" secondAttribute="height" constant="1" id="6aE-7w-x1b"/>
-                <constraint firstItem="cge-u1-neN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="-8" id="8uR-lA-ek5"/>
-                <constraint firstItem="cge-u1-neN" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-14.5" id="BaV-mp-dci"/>
-                <constraint firstItem="SLg-M0-dk1" firstAttribute="top" secondItem="rzH-S6-2aP" secondAttribute="bottom" id="HN6-Zy-ET2"/>
-                <constraint firstItem="cge-u1-neN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" constant="-12" id="PlT-f1-K62"/>
-                <constraint firstAttribute="bottomMargin" secondItem="SLg-M0-dk1" secondAttribute="bottom" id="UCV-6d-EzT"/>
-                <constraint firstItem="rzH-S6-2aP" firstAttribute="centerX" secondItem="cge-u1-neN" secondAttribute="centerX" id="YjZ-9O-IxO"/>
+                <constraint firstItem="SLg-M0-dk1" firstAttribute="top" secondItem="NOS-xQ-wcE" secondAttribute="bottom" id="71f-dI-jZf"/>
+                <constraint firstAttribute="trailingMargin" secondItem="SLg-M0-dk1" secondAttribute="trailing" constant="8" id="FIa-94-jP8"/>
+                <constraint firstItem="NOS-xQ-wcE" firstAttribute="centerX" secondItem="cge-u1-neN" secondAttribute="centerX" id="NnG-1z-Cvl"/>
+                <constraint firstItem="NOS-xQ-wcE" firstAttribute="width" secondItem="cge-u1-neN" secondAttribute="width" multiplier="0.3" id="QC2-lW-ud3"/>
+                <constraint firstAttribute="bottomMargin" secondItem="SLg-M0-dk1" secondAttribute="bottom" id="SEA-vz-Gl3"/>
                 <constraint firstItem="SLg-M0-dk1" firstAttribute="top" secondItem="cge-u1-neN" secondAttribute="bottom" id="ZMO-2n-o2e"/>
-                <constraint firstItem="rzH-S6-2aP" firstAttribute="width" secondItem="cge-u1-neN" secondAttribute="width" multiplier="0.3" constant="1" id="bmb-FD-jdL"/>
+                <constraint firstItem="cge-u1-neN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="cf1-Q0-ADa"/>
                 <constraint firstItem="SLg-M0-dk1" firstAttribute="top" secondItem="cge-u1-neN" secondAttribute="bottom" id="d9E-np-8Fj"/>
-                <constraint firstItem="SLg-M0-dk1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="eUR-I7-GGN"/>
+                <constraint firstItem="SLg-M0-dk1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="fOY-n5-yh6"/>
                 <constraint firstItem="cge-u1-neN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gV5-Gl-OrX"/>
-                <constraint firstAttribute="trailingMargin" secondItem="cge-u1-neN" secondAttribute="trailing" constant="-12" id="gyk-6Q-DAB"/>
-                <constraint firstItem="SLg-M0-dk1" firstAttribute="top" secondItem="cge-u1-neN" secondAttribute="bottom" id="lbt-Gi-4YA"/>
+                <constraint firstItem="cge-u1-neN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="jqk-pA-GM1"/>
+                <constraint firstItem="NOS-xQ-wcE" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.3" id="ope-2d-b9x"/>
+                <constraint firstAttribute="trailingMargin" secondItem="cge-u1-neN" secondAttribute="trailing" id="qSP-X0-FJA"/>
+                <constraint firstItem="NOS-xQ-wcE" firstAttribute="centerX" secondItem="cge-u1-neN" secondAttribute="centerX" id="sKf-BC-FOA"/>
+                <constraint firstItem="SLg-M0-dk1" firstAttribute="top" secondItem="cge-u1-neN" secondAttribute="bottom" id="yW7-kS-9IW"/>
             </constraints>
             <size key="customSize" width="136" height="193"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="gV5-Gl-OrX"/>
+                    <exclude reference="NnG-1z-Cvl"/>
+                    <exclude reference="QC2-lW-ud3"/>
                     <exclude reference="ZMO-2n-o2e"/>
                     <exclude reference="d9E-np-8Fj"/>
                 </mask>

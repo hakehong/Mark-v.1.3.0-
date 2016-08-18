@@ -8,8 +8,8 @@
 
 #import "WebImgScrollView.h"
 #import "SDWebImageManager.h"
-#import "MBProgressHUD+MJ.h"
 #import "UIView+Extension.h"
+#import "SVProgressHUD.h"
 
 static CGFloat const animationDutation = 0.2f;
 
@@ -27,6 +27,7 @@ static CGFloat const animationDutation = 0.2f;
 @property (nonatomic, strong) UIView *scaleView;
 
 @property (nonatomic, strong) UIButton *downLoadBtn;
+
 
 
 @end
@@ -106,13 +107,16 @@ static CGFloat const animationDutation = 0.2f;
 
 - (void)downLoadImg{
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        [MBProgressHUD showError:@"无法读取相册"];
+//        [MBProgressHUD showError:@"无法读取相册"];
+        [SVProgressHUD showErrorWithStatus:@"无法读取相册"];
     }
     UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
 }
 
 - (void)image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo{
-    [MBProgressHUD showSuccess:@"已保存至相册"];
+//    [MBProgressHUD :@"已保存至相册"];
+    [SVProgressHUD showSuccessWithStatus:@"已保存至相册"];
+
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

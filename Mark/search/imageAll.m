@@ -7,7 +7,7 @@
 //
 
 #import "imageAll.h"
-
+@class CycleMovie;
 @implementation imageAll
 +(NSDictionary *)modelCustomPropertyMapper
 {

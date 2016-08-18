@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class imageAll;
 @interface searchMovie : NSObject
 @property(nonatomic,copy) NSString *title;
 @property(nonatomic,copy)NSString *alt;
-@property (nonatomic, strong) NSArray *images;
+@property (nonatomic, strong) imageAll *images;
 @end
